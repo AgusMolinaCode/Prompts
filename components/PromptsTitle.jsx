@@ -33,7 +33,7 @@ const PromptsTitle = () => {
                         <div className='flex justify-end'>
                             <div className='mt-5  border-r-4 max-w-[700px] border-indigo-500 border-collapse'>
                                 <p className='font-outfit text-xl mr-10'>
-                                    La especificidad es otro aspecto crucial al escribir prompts. Cuanto más específico sea el prompt, más precisa y relevante será la respuesta del Chat. Es importante ser claro acerca de los detalles necesarios para evitar respuestas ambiguas o genéricas.
+                                    La especificidad es otro aspecto crucial al escribir prompts. Cuanto más específico sea el prompt, más precisa y relevante será la respuesta del Chat. Es importante ser claro acerca de los detalles necesarios para evitar respuestas genéricas.
                                 </p>
                             </div>
                         </div>
