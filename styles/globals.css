@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;500;600;800&family=Racing+Sans+One&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  @apply bg-primary text-primary 
+}
+
+.app {
+  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl  mx-auto px-2;
+}
+
+.black_btn {
+  @apply rounded-full border border-black  py-1.5 px-5 text-white transition-all hover:bg-white hover:text-black text-center text-sm font-outfit flex items-center justify-center;
+}
+
+.outline_btn {
+  @apply rounded-full border border-black py-1.5 px-5 text-black transition-all hover:bg-black hover:text-white text-center text-sm font-outfit flex items-center justify-center;
+}
+
+.head_text {
+  @apply mt-5 text-5xl font-outfit font-extrabold leading-[1.15] sm:text-6xl;
+}
+
+.green_gradient {
+  @apply bg-gradient-to-r from-green-400 to-green-500 bg-clip-text text-transparent;
+}
+
+.blue_gradient {
+  @apply bg-gradient-to-r from-blue-500 via-blue-700 to-indigo-400 bg-clip-text text-transparent;
+}
+
+.desc {
+  @apply mt-5 text-lg sm:text-xl max-w-2xl;
+}
+
+.search_input {
+  @apply block w-full rounded-md border py-2.5 font-outfit pl-5 pr-12 text-sm shadow-2xl font-medium  focus:outline-none focus:ring-0;
+}
+
+.copy_btn {
+  @apply w-7 h-7 rounded-full bg-white/10 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur flex justify-center items-center cursor-pointer;
+}
+
+.glassmorphism {
+  @apply rounded-xl border border-gray-200 bg-white/20 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur p-5;
+}
+
+.prompt_layout {
+  @apply space-y-6 py-8 sm:columns-2 sm:gap-6 xl:columns-3;
+}
+
+/* Feed Component */
+.feed {
+  @apply mt-16 mx-auto w-full max-w-xl flex justify-center items-center flex-col gap-2;
+}
+
+/* Form Component */
+.form_textarea {
+  @apply w-full flex rounded-lg h-[200px] mt-2 p-3 text-[1rem] outline-0;
+}
+
+.form_input {
+  @apply w-full flex rounded-lg mt-2 p-3 text-[1rem] outline-0;
+}
+
+/* Nav Component */
+.logo_text {
+  @apply max-sm:hidden font-outfit font-semibold text-lg  tracking-wide;
+}
+
+.dropdown {
+  @apply absolute right-0 top-full mt-3 w-full p-5 rounded-lg bg-white min-w-[210px] flex flex-col gap-2 justify-end items-end;
+}
+
+.dropdown_link {
+  @apply text-sm font-outfit text-gray-700 hover:text-gray-500 font-medium;
+}
+
+
+/* .prompt_card {
+  @apply flex-1 break-inside-avoid rounded-lg border border-gray-300 bg-white/70 bg-clip-padding p-6 pb-4 backdrop-blur-lg shadow-lg backdrop-filter md:w-[360px] w-full h-fit;
+} */
+
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+.flex-start {
+  @apply flex justify-start items-start;
+}
+
+.flex-end {
+  @apply flex justify-end items-center;
+}
+
+.flex-between {
+  @apply flex justify-between items-center;
+}
+
+.dark {
+  --color-bg-primary: #3f4857;
+  --color-bg-primary: #2d3748;
+  --color-bg-secondary: #37445b;
+  --color-text-primary: #dbdbdb;
+  --color-text-secondary: #e2e8f0;
+  --color-text-accent: #81e6d9;
+  --color-bg-input: #0f1724;
+  --color-bg-button: #5858cf;
+  border-color: var(--color-text-secondary);
+}
+
+.light {
+  --color-bg-primary: #e9e9ef;
+  --color-bg-secondary: #ffffff;
+  --color-text-primary: #2d3748;
+  --color-text-secondary: #4a5568;
+  --color-text-accent: #06094e;
+  --color-bg-input: #edf2f7;
+  --color-bg-button: #2b6cb0;
+  border-color: var(--color-text-primary);
+}
+
