@@ -1,16 +1,22 @@
+import React, { useEffect } from 'react';
 import ReactPaginate from 'react-paginate';
 import PromptCard from './PromptCard';
-import { useState } from 'react';
-
 
 const Pagination = ({ posts, handleTagClick, handleEdit, handleDelete }) => {
   const [currentPage, setCurrentPage] = useState(0);
   const itemsPerPage = 6;
 
   const handlePageChange = ({ selected }) => {
-    event.preventDefault();
     setCurrentPage(selected);
   };
+
+  const maintainScrollPosition = () => {
+    window.scrollTo(window.scrollX, window.scrollY);
+  };
+
+  useEffect(() => {
+    maintainScrollPosition();
+  }, [currentPage]);
 
   const startIndex = currentPage * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
@@ -31,7 +37,7 @@ const Pagination = ({ posts, handleTagClick, handleEdit, handleDelete }) => {
         previousLabel={'← Previous'}
         nextLabel={'Next →'}
         pageCount={Math.ceil(posts.length / itemsPerPage)}
-        onPageChange={(event) => handlePageChange(event, {selected: event.selected})}
+        onPageChange={handlePageChange}
         containerClassName={'pagination'}
         activeClassName={'active'}
       />
