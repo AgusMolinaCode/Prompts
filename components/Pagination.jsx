@@ -8,6 +8,7 @@ const Pagination = ({ posts, handleTagClick, handleEdit, handleDelete }) => {
   const itemsPerPage = 6;
 
   const handlePageChange = ({ selected }) => {
+    event.preventDefault();
     setCurrentPage(selected);
   };
 
@@ -30,7 +31,7 @@ const Pagination = ({ posts, handleTagClick, handleEdit, handleDelete }) => {
         previousLabel={'← Previous'}
         nextLabel={'Next →'}
         pageCount={Math.ceil(posts.length / itemsPerPage)}
-        onPageChange={handlePageChange}
+        onPageChange={(event) => handlePageChange(event, {selected: event.selected})}
         containerClassName={'pagination'}
         activeClassName={'active'}
       />
