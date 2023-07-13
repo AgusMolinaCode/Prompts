@@ -2,6 +2,8 @@
 
 ## Proyecto realizado con Next.js, Next Auth, Mongo DB, Tailwind CSS
 
+### Desarrollé un proyecto con Next.js, Next Auth, MongoDB y Tailwind CSS. Los usuarios pueden iniciar sesión, compartir prompts y obtener respuestas mejoradas de ChatGPT. Con una interfaz moderna y un rendimiento óptimo, mi proyecto ofrece una experiencia interactiva para la comunidad.
+
 
 
 
