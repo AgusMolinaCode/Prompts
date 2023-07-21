@@ -118,6 +118,7 @@ const Feed = () => {
         nextLabel={<FiChevronsRight />}
         pageCount={pageCount}
         onPageChange={handlePageChange}
+        pageLinkClassName="scroll-auto"
         containerClassName={"pagination"}
         activeClassName={"active"}
         forcePage={currentPage}
