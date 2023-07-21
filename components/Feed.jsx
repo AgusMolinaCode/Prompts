@@ -1,11 +1,10 @@
-'use client';
+"use client";
 
 import { useState, useEffect } from "react";
 import PromptCard from "./PromptCard";
 import ReactPaginate from "react-paginate";
-import { FiChevronsLeft, FiChevronsRight } from 'react-icons/fi';
+import { FiChevronsLeft, FiChevronsRight } from "react-icons/fi";
 import PromptsTitle from "./PromptsTitle";
-import Footer from "./Footer";
 
 const PromptCardList = ({ data, handleTagClick }) => {
   return (
@@ -81,7 +80,6 @@ const Feed = () => {
     const newPage = Math.min(selected, Math.max(pageCount - 1, 0));
     setCurrentPage(newPage);
   };
-  
 
   let startIndex, endIndex;
   let currentPosts = [];
@@ -97,8 +95,6 @@ const Feed = () => {
   }
 
   return (
-
-    
     <section className="max-w-7xl px-4">
       <form className="relative w-full mt-10  flex-center">
         <input
@@ -111,7 +107,11 @@ const Feed = () => {
         />
       </form>
 
-      <PromptCardList data={currentPosts} handleTagClick={handleTagClick} />
+      {allPosts.length > 0 ? (
+        <PromptCardList data={currentPosts} handleTagClick={handleTagClick} />
+      ) : (
+        <p className="text-2xl text-center font-outfit pt-10 text-black">Cargando Prompts...</p>
+      )}
 
       <ReactPaginate
         previousLabel={<FiChevronsLeft />}
@@ -120,7 +120,7 @@ const Feed = () => {
         onPageChange={handlePageChange}
         containerClassName={"pagination"}
         activeClassName={"active"}
-        forcePage={currentPage} 
+        forcePage={currentPage}
         breakLabel="..."
         pageRangeDisplayed={5}
         className="flex justify-center font-outfit text-lg font-bold mt-10 gap-2 mb-10"
@@ -129,13 +129,11 @@ const Feed = () => {
         pageClassName="w-10 h-10 flex justify-center items-center rounded-full bg-indigo-300 text-gray-400"
         breakClassName="w-10 h-10 flex justify-center items-center rounded-full bg-gray-200 text-gray-400"
         disabledClassName="opacity-50 cursor-not-allowed"
-        activeLinkClassName = "text-black"     
+        activeLinkClassName="text-black"
       />
 
       <PromptsTitle />
-      
     </section>
-  
   );
 };
 
